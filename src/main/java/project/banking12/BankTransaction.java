@@ -2,6 +2,10 @@ package project.banking12;
 
 import java.time.LocalDate;
 
+/**
+ * Java bean
+ */
+
 public class BankTransaction {
     private final LocalDate date;
     private final double amount;

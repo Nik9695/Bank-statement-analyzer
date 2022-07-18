@@ -1,11 +1,14 @@
 package project.banking12;
 
-
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
+
+/**
+ * Remove old unused methods
+ */
 
 public class BankStatementProcessor {
 

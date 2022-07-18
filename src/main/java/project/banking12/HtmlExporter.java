@@ -1,5 +1,18 @@
 package project.banking12;
 
+/**
+ * Class exports Summary Statistics into HTML format
+ */
+
+/**
+ * TODO
+ *
+ * 1) class need to export Summary Statistics into HTML file
+ *
+ * 2) in the best case summary statistics should open browser and show everything on the new page
+ *
+ */
+
 public class HtmlExporter implements  Exporter{
     @Override
     public String export(final SummaryStatistics summaryStatistics) {
