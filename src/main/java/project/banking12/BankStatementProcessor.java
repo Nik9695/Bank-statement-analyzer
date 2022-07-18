@@ -10,6 +10,11 @@ import java.util.List;
  * Remove old unused methods
  */
 
+/**
+ * TODO
+ */
+
+
 public class BankStatementProcessor {
 
     private final List<BankTransaction> bankTransactions;
@@ -27,13 +32,16 @@ public class BankStatementProcessor {
         double total = 0d;
         for(BankTransaction bankTransaction : bankTransactions)
             total += bankTransaction.getAmount();
-        System.out.println("Total amount of all transactions: " + total);
+        System.out.println("Total amount </> of all transactions: " + total);
         return total;
     }
     /**
      *
      */
 
+
+
+    //  ()->{}
 
 /*    public double calculateTotalInMonth(final Month month){
 
