@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="BankingAnalyzer1_2" />
+        <module name="Banking-Analyzer-ver-1.2" />
       </profile>
     </annotationProcessing>
   </component>

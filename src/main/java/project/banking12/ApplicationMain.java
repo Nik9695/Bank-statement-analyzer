@@ -10,33 +10,16 @@ import java.util.List;
 public class ApplicationMain {
 
     private static final String FILE_PATH =
-            "E:\\Java pet projects\\Banking Analyzer ver 1.2\\BankingAnalyzer1_2\\src\\main\\resources\\transactions.txt";
+            "D:\\JavaPetProjects\\Banking-Analyzer-ver-1.2\\src\\main\\resources\\transactions.txt";
 
     private static Path path = Paths.get(FILE_PATH);
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-/*        BankStatementParser bankStatementCSVParser = new BankStatementCSVParser();
-        BankingAnalyzer bankingAnalyzer = new BankingAnalyzer();
-        HistogramProcessor histogramProcessor = new HistogramProcessor();
+        final BankStatementAnalyzer analyzer = new BankStatementAnalyzer();
+        final BankStatementParser parserCSV = new BankStatementCSVParser();
+        final Exporter exporterHtml = new HtmlExporter();
 
-        bankingAnalyzer.analyze(path,bankStatementCSVParser);
-        System.out.println();
-        histogramProcessor.drawHistogram(path,bankStatementCSVParser);*/
-
-
-        BankStatementParser bankStatementCSVParser = new BankStatementCSVParser();
-        BankTransactionFilter simpleFilter = new SimpleBankTransactionFilter();
-
-        final List<String> lines = Files.readAllLines(path);
-        final List<BankTransaction> bankTransactions = bankStatementCSVParser.parseByLines(lines);
-
-        BankStatementProcessor processor = new BankStatementProcessor(bankTransactions);
-
-
-        //final List<BankTransaction> result = processor.findTransaction(simpleFilter);
-        final List<BankTransaction> result = processor.findTransaction(bankTransaction ->
-                bankTransaction.getDate().getMonth() == Month.FEBRUARY && bankTransaction.getAmount() >= 3000);
-        System.out.println(result);
+        analyzer.analyze("transactions.txt", parserCSV, exporterHtml);
     }
 }

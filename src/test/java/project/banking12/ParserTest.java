@@ -17,7 +17,7 @@ import java.util.List;
 
 public class ParserTest {
     private static final String FILE_PATH =
-            "E:\\Java pet projects\\Banking Analyzer ver 1.2\\BankingAnalyzer1_2\\src\\test\\resources\\transactionsForTest.txt";
+            "D:\\JavaPetProjects\\Banking-Analyzer-ver-1.2\\src\\test\\resources\\transactionsForTest.txt";
 
     private static Path path = Paths.get(FILE_PATH);
 

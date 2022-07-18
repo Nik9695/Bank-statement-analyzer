@@ -4,6 +4,7 @@ package project.banking12;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
 
 public class BankStatementProcessor {
@@ -74,6 +75,18 @@ public class BankStatementProcessor {
             result = bankTransactionSummarizer.summarize(result,bankTransaction);
         }
         return result;
+    }
+
+    public SummaryStatistics createSummaryStatistics(){
+
+        final DoubleSummaryStatistics doubleSummaryStatistics = bankTransactions.stream()
+                .mapToDouble(BankTransaction::getAmount)
+                .summaryStatistics();
+
+        return new SummaryStatistics(doubleSummaryStatistics.getSum(),
+                doubleSummaryStatistics.getMax(),
+                doubleSummaryStatistics.getMin(),
+                doubleSummaryStatistics.getAverage());
     }
 
     public double calculateTotalInMonth(final Month month){
