@@ -4,6 +4,8 @@ package project.banking12;
  * Class exports Summary Statistics into HTML format
  */
 
+import java.io.File;
+
 /**
  * TODO
  *
@@ -14,6 +16,17 @@ package project.banking12;
  */
 
 public class HtmlExporter implements  Exporter{
+
+    private static String directoryPath;
+    private static String expectedFileName;
+    private static FileCreator htmlCreator = new FileCreatorHtml();
+
+
+    public HtmlExporter(String directoryPath, String expectedFileName){
+        this.directoryPath = directoryPath;
+        this.expectedFileName = expectedFileName;
+    }
+
     @Override
     public String export(final SummaryStatistics summaryStatistics) {
         String result = "<!doctype html>";
@@ -28,6 +41,17 @@ public class HtmlExporter implements  Exporter{
         result += "</ul>";
         result += "</body>";
         result += "</html>";
+
+        htmlCreator.createFile(directoryPath,expectedFileName,result);
+
         return result;
     }
+
+/*
+    public File exportToFileHtml(FileCreator fileCreator){
+        return fileCreator.createFile(filePath,expectedFileName);
+    }
+*/
+
+
 }

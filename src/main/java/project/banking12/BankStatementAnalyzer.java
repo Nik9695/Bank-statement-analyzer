@@ -9,16 +9,6 @@ import java.util.List;
 
 public class BankStatementAnalyzer {
 
-    /**
-     * TODO
-     *
-     * 1) Remove exact path from the class, make it overall
-     */
-
-/*    private static final String RESOURCES =
-            "D:\\JavaPetProjects\\Banking-Analyzer-ver-1.2\\src\\main\\resources\\";*/
-
-
     public void analyze(final String fileName, final BankStatementParser bankStatementParser,
                         final Exporter exporter) throws IOException {
 
@@ -31,7 +21,7 @@ public class BankStatementAnalyzer {
 
         final SummaryStatistics summaryStatistics = bankStatementProcessor.createSummaryStatistics();
 
-        System.out.println(exporter.export(summaryStatistics));
+        exporter.export(summaryStatistics);
 
     }
 }
