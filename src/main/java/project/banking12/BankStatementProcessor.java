@@ -7,7 +7,15 @@ import java.util.DoubleSummaryStatistics;
 import java.util.List;
 
 /**
- * Remove old unused methods
+ * Possible functions:
+ *
+ *      1) create Summary Statics ( max, min, sum, avg)
+ *
+ *      2) calculate transactions in exact Month
+ *
+ *      3) calculate number of transactions\
+ *
+ *      4) filter transactions according to some condition
  */
 
 /**
@@ -23,62 +31,10 @@ public class BankStatementProcessor {
         this.bankTransactions = bankTransactions;
     }
 
-
-    /**
-     * Must be replaced by method using interface BankTransactionSummarizer
-     * @return
-     */
-    public double claculateTotalAmount(){
-        double total = 0d;
-        for(BankTransaction bankTransaction : bankTransactions)
-            total += bankTransaction.getAmount();
-        System.out.println("Total amount </> of all transactions: " + total);
-        return total;
-    }
-    /**
-     *
-     */
-
-
-
-    //  ()->{}
-
-/*    public double calculateTotalInMonth(final Month month){
-
-        final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        double totalMonth = 0d;
-        for(BankTransaction bankTransaction : bankTransactions){
-            if(month == bankTransaction.getDate().getMonth())
-                totalMonth += bankTransaction.getAmount();
-        }
-        System.out.println("Total amount of transactions on " + month + " : " + totalMonth);
-        return totalMonth;
-    }*/
-
-
-    public  double displayMaximumTransaction(){
-        double maxValue = Double.MIN_VALUE;
-        BankTransaction biggestBankTransaction = null;
-        for(BankTransaction bankTransaction : bankTransactions){
-            if(bankTransaction.getAmount() > maxValue){
-                maxValue = bankTransaction.getAmount();
-                biggestBankTransaction = bankTransaction;
-            }
-        }
-        System.out.println("The biggest bank transaction is: " + biggestBankTransaction );
-        return 0d;
-    }
-
     public int calculateNumberOfTransactions(){
         System.out.println("Number of all transactions in the file: " + bankTransactions.size());
         return bankTransactions.size();
     }
-
-    /**
-     *
-     * New methods
-     *
-     */
 
     public double summarizeTransactions(final BankTransactionSummarizer bankTransactionSummarizer){
         double result = 0;

@@ -1,14 +1,17 @@
 package project.banking12;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+
 public class JsonExporter implements Exporter{
 
-    private static String directoryPath;
-    private static String expectedFileName;
-    private static FileCreator jsonCreator = new FileCreatorJson();
+    private static String exportDirectoryPath;
+    private final static String FILE_NAME = "JsonSummaryStatistics.json";
 
-    public JsonExporter(String directoryPath, String expectedFileName){
-        this.directoryPath = directoryPath;
-        this.expectedFileName = expectedFileName;
+    public JsonExporter(String exportDirectoryPath){
+        this.exportDirectoryPath = exportDirectoryPath;
     }
 
     @Override
@@ -27,9 +30,14 @@ public class JsonExporter implements Exporter{
 
         String result = String.valueOf(stringBuilder);
 
-        jsonCreator.createFile(directoryPath,expectedFileName,result);
+        try(PrintStream output = new PrintStream(new FileOutputStream(new File(exportDirectoryPath + FILE_NAME)))){
+            System.out.println("JSON export file created.");
+            output.print(result);
+        } catch (IOException e) {
+            System.out.println("Error while exporting to JSON.");
+        }
 
-        return String.valueOf(stringBuilder);
+        return result;
     }
 
 }

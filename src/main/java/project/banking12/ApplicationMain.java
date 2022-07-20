@@ -8,15 +8,17 @@ import java.io.IOException;
  *
  * 1) BankStatementAnalyzer - make class more overall, delete exact path - DONE!
  *
- * 2) BankStatementProcessor - delete unused methods
+ * 2) BankStatementProcessor - delete unused methods - DONE!
  *
  * 3) Create export function to JSON - DONE!
  *
- * 4) Create export function to XML -
+ * 4) Create export function to XML - DONE!
  *
- * 5) Create class Notification for collecting errors
+ * 5) Create class Notification for collecting errors - 
  *
  * 6) Create Web application for analyzing bank transactions
+ *
+ * 7) Round 'average' in summary statistics
  */
 
 public class ApplicationMain {
@@ -32,29 +34,30 @@ public class ApplicationMain {
      * @throws InterruptedException
      */
 
-    final static String resourcesFilePath = "D:\\JavaPetProjects\\Banking-Analyzer-ver-1.2\\src\\main\\resources\\transactions.txt";
-    private static String directoryPath = "D:\\JavaPetProjects\\Banking-Analyzer-ver-1.2\\src\\main\\resources\\";
-    private static String expectedFileNameJson = "JsonSummaryStatistics.json";
-    private static String expectedFileNameHtml = "HtmlSummaryStatistics.html";
+    final static String resourcesFilePath =
+            "D:\\JavaPetProjects\\Banking-Analyzer-ver-1.2\\src\\main\\resources\\transactions.txt";
 
+    private static String exportDirectoryPath = "D:\\JavaPetProjects\\Banking-Analyzer-ver-1.2\\src\\main\\resources\\";
 
     public static void main(String[] args){
 
         final BankStatementAnalyzer analyzer = new BankStatementAnalyzer();
         final BankStatementParser parserCSV = new BankStatementCSVParser();
 
-        final Exporter exporterHtml = new HtmlExporter(directoryPath,expectedFileNameHtml);
-        final Exporter exporterJson = new JsonExporter(directoryPath,expectedFileNameJson);
+        final Exporter exporterHtml = new HtmlExporter(exportDirectoryPath);
+        final Exporter exporterJson = new JsonExporter(exportDirectoryPath);
+        final Exporter exporterXml = new XmlExporter(exportDirectoryPath);
 
 
         try{
             if(args.length < 1){
                 analyzer.analyze(resourcesFilePath, parserCSV, exporterHtml);
                 analyzer.analyze(resourcesFilePath, parserCSV, exporterJson);
-
+                analyzer.analyze(resourcesFilePath,parserCSV,exporterXml);
             } else {
                 analyzer.analyze(args[0], parserCSV, exporterHtml);
                 analyzer.analyze(args[0], parserCSV, exporterJson);
+
             }
         } catch (IOException e){
             e.printStackTrace();

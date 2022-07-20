@@ -5,31 +5,24 @@ package project.banking12;
  */
 
 import java.io.File;
-
-/**
- * TODO
- *
- * 1) class need to export Summary Statistics into HTML file
- *
- * 2) in the best case summary statistics should open browser and show everything on the new page
- *
- */
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 
 public class HtmlExporter implements  Exporter{
 
-    private static String directoryPath;
-    private static String expectedFileName;
-    private static FileCreator htmlCreator = new FileCreatorHtml();
+    private static String exportDirectoryPath;
+    private final static String FILE_NAME = "HtmlSummaryStatistics.html";
 
-
-    public HtmlExporter(String directoryPath, String expectedFileName){
-        this.directoryPath = directoryPath;
-        this.expectedFileName = expectedFileName;
+    public HtmlExporter(String exportDirectoryPath){
+        this.exportDirectoryPath = exportDirectoryPath;
     }
 
     @Override
     public String export(final SummaryStatistics summaryStatistics) {
+
         String result = "<!doctype html>";
+
         result += "<html lang='en'>";
         result += "<head><title>Bank Transaction Report</title></head>";
         result += "<body>";
@@ -42,16 +35,14 @@ public class HtmlExporter implements  Exporter{
         result += "</body>";
         result += "</html>";
 
-        htmlCreator.createFile(directoryPath,expectedFileName,result);
+        try(PrintStream output = new PrintStream(new FileOutputStream(new File(exportDirectoryPath + FILE_NAME)))){
+            System.out.println("HTML export file created.");
+            output.print(result);
+        } catch (IOException e) {
+            System.out.println("Error while exporting to HTML.");
+        }
 
         return result;
     }
-
-/*
-    public File exportToFileHtml(FileCreator fileCreator){
-        return fileCreator.createFile(filePath,expectedFileName);
-    }
-*/
-
 
 }
