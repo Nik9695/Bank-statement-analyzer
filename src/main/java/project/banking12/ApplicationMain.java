@@ -14,11 +14,15 @@ import java.io.IOException;
  *
  * 4) Create export function to XML - DONE!
  *
- * 5) Create class Notification for collecting errors - 
+ * 5) Create class Notification for collecting errors - NONE
  *
- * 6) Create Web application for analyzing bank transactions
+ * 6) Create Web application for analyzing bank transactions - NONE
  *
- * 7) Round 'average' in summary statistics
+ * 7) Round 'average' in summary statistics - NONE
+ *
+ * 8) Create new tests to cover new functions - NONE
+ *
+ * 9) Write comments for each class - NONE
  */
 
 public class ApplicationMain {
