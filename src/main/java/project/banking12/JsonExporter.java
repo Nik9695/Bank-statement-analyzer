@@ -24,7 +24,7 @@ public class JsonExporter implements Exporter{
         stringBuilder.append("\"Sum of all transactions\"" + " : " + summaryStatistics.getSum() + ",");
         stringBuilder.append("\"Maximum transaction\"" + " : " + summaryStatistics.getMax() + ",");
         stringBuilder.append("\"Minimum transaction\"" + " : " + summaryStatistics.getMin() + ",");
-        stringBuilder.append("\"Average of all transactions\"" + " : " + String.format("%.2f",summaryStatistics.getAverage()));
+        stringBuilder.append("\"Average of all transactions\"" + " : " + summaryStatistics.getAverage());
         stringBuilder.append("}");
         stringBuilder.append("}");
 

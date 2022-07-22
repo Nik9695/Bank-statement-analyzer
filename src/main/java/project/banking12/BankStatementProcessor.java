@@ -53,7 +53,7 @@ public class BankStatementProcessor {
         return new SummaryStatistics(doubleSummaryStatistics.getSum(),
                 doubleSummaryStatistics.getMax(),
                 doubleSummaryStatistics.getMin(),
-                doubleSummaryStatistics.getAverage());
+                Math.round(doubleSummaryStatistics.getAverage()));
     }
 
     public double calculateTotalInMonth(final Month month){
