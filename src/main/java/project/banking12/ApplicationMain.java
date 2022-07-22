@@ -14,7 +14,7 @@ import java.io.IOException;
  *
  * 4) Create export function to XML - DONE!
  *
- * 5) Create class Notification for collecting errors - NONE
+ * 5) Create class Notification for collecting errors - DONE!
  *
  * 6) Create Web application for analyzing bank transactions - NONE
  *

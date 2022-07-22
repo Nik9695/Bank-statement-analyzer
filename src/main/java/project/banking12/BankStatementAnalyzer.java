@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.Month;
 import java.util.List;
 
 public class BankStatementAnalyzer {
@@ -17,11 +16,17 @@ public class BankStatementAnalyzer {
 
         final List<BankTransaction> bankTransactions = bankStatementParser.parseByLines(lines);
 
+        final ErrorCollector errorCollector = new ErrorCollector();
+
         final BankStatementProcessor bankStatementProcessor = new BankStatementProcessor(bankTransactions);
 
         final SummaryStatistics summaryStatistics = bankStatementProcessor.createSummaryStatistics();
 
+        errorCollector.validate(bankTransactions);
+
         exporter.export(summaryStatistics);
+
+        System.out.println("<--------------------------->");
 
     }
 }
