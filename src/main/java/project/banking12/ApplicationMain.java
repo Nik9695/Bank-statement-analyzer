@@ -41,9 +41,9 @@ public class ApplicationMain {
      * @throws InterruptedException
      */
 
-    final static String resourcesFilePath = ".\\resources\\transactions.txt";
+    final static String resourcesFilePath = "src\\main\\resources\\transactions.txt";
 
-    private static String exportDirectoryPath = ".\\src\\main\\resources\\";
+    private static String exportDirectoryPath = "src\\main\\resources\\";
 
     public static void main(String[] args){
 
@@ -59,11 +59,11 @@ public class ApplicationMain {
             if(args.length < 1){
                 analyzer.analyze(resourcesFilePath, parserCSV, exporterHtml);
                 analyzer.analyze(resourcesFilePath, parserCSV, exporterJson);
-                analyzer.analyze(resourcesFilePath,parserCSV,exporterXml);
+                analyzer.analyze(resourcesFilePath, parserCSV, exporterXml);
             } else {
                 analyzer.analyze(args[0], parserCSV, exporterHtml);
                 analyzer.analyze(args[0], parserCSV, exporterJson);
-
+                analyzer.analyze(args[0], parserCSV, exporterXml);
             }
         } catch (IOException e){
             e.printStackTrace();

@@ -1,23 +1,21 @@
-<<<<<<< HEAD
 <div id="top"></div>
 
 [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
     <img src="src/images/logo.png" alt="Logo" width="650" height="150">
-  </a>
 
-<h3 align="center">Bank statement analyzer</h3>
+<h2 align="center">Bank statement analyzer</h2>
 
   <p align="center">
     Project description
-    <br />
+    <br/>
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
   </p>
 </div>
@@ -34,19 +32,11 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
+    <li><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#implemented-and-planned-functions">Implemented and planned functions</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -54,10 +44,32 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+This project is aimed at developmental independent software designed to analyze banking activity.
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Banking Analyzer is not a web resource, which guarantees the protection of each user's personal information, since the results of the program's work are stored only on the local machine.
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+There are two ways to work with Banking Analyzer:
+
+a) option 'A':
+
+	1) the file under investigation is placed in the specified directory
+
+	2) the program is launched using the Maven plugin
+
+	3) the result is exported to files of 3 different formats - JSON, XML, HTML
+
+b) option 'B':
+
+	1) the program is launched using the Maven plugin, specifying the directory where the file under investigation is located
+
+	2) the result is exported to files of 3 different formats - JSON, XML, HTML
+
+Regardless of the option you choose 'A' or 'B', the results of the program are exported to the folder 'resources'.
+
+In order to get an exact description of how the classes work, please refer to the documentation.
+<div align="center">
+    <img src="src/images/carbon.png" alt="Logo" width="814" height="658">
+</div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -72,7 +84,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-### Installation
+## Installation
 
 1.Clone the repo:
    ```shell
@@ -82,10 +94,24 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
    ```shell
    mvn install
    ```
-3.Run application using maven plugin `exec` and specifying folder for export files: 
-   ```shell
-   mvn exec:java -Dexec.args="[absolute-file-path]"
+3.Put file for analyze at:
    ```
+   src\main\resources\
+   ```
+4.Run application:
+- using maven plugin `exec` and specifying folder where your 'CSV' file for parsing is located:
+   ```shell
+    ...\Banking-Analyzer-ver-1.2>mvn exec:java -Dexec.args="[absolute-file-path]"
+   ```
+- using maven plugin `exec` without specifying folder dor input. In this case example-file `transactions.txt` will be parsed:
+  ```shell
+  ...\Banking-Analyzer-ver-1.2>mvn exec:java 
+  ```
+
+In both options export files will be created in next directory :
+```shell
+...\Banking-Analyzer-ver-1.2\src\main\resources
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -114,13 +140,22 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
-<!-- ROADMAP -->
-## Roadmap
+<!-- Functions -->
+## Implemented and planned functions  
+- [ ] <b><u>Parsing of input file</u></b>
+  - [x] Parsing CSV file
+  - [ ] Parsing JSON file
+  - [ ] Parsing XML file
+- [ ] <b><u>Processing of data</u></b> 
+  - [x] Calculating maximum and minimum transaction
+  - [x] Calculating average of all transactions
+  - [ ] Calculating transactions in specified month
+  - [ ] Drawing histogram according to analyzed results
+- [x] <b><u>Export</u></b>
+  - [x] Export to JSON
+  - [x] Export to HTML
+  - [x] Export to XML
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
@@ -145,33 +180,15 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Nikita Agureev - nagureev@gmail.com
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -179,56 +196,15 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+
+[contributors-shield]: https://img.shields.io/github/contributors/Nik9695/Banking-Analyzer-ver-1.2.svg?style=for-the-badge
+[contributors-url]: https://github.com/Nik9695/Banking-Analyzer-ver-1.2/graphs/contributors
+
+[stars-shield]: https://img.shields.io/github/stars/Nik9695/Banking-Analyzer-ver-1.2.svg?style=for-the-badge
+[stars-url]: https://github.com/Nik9695/Banking-Analyzer-ver-1.2/stargazers
+
+[issues-shield]: https://img.shields.io/github/issues/Nik9695/Banking-Analyzer-ver-1.2.svg?style=for-the-badge
+[issues-url]: https://github.com/Nik9695/Banking-Analyzer-ver-1.2/issues
+
 =======
 # Banking-Analyzer-ver-1.2
-
-Overal description of the app.
-
-
-## Instalation 
-
-Instruction how to install the app
-
-## Usage
-
-??
-
-## Contributing 
-
-??
-
-
-## License
-
-
-??
->>>>>>> 4e45649e52ce8cab656b2c457d91fab7db20062c
