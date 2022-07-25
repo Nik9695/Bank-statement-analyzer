@@ -18,9 +18,12 @@ import java.io.IOException;
  *
  * 6) Create Web application for analyzing bank transactions - NONE
  *
- * 7) Round 'average' in summary statistics - NONE
+* 7) Round 'average' in summary statistics - DONE!
  *
- * 8) Create new tests to cover new functions - NONE
+ * 8) Create new tests to cover new functions:
+ *      a)
+ *      b)
+ *      c)
  *
  * 9) Write comments for each class - NONE
  */
@@ -38,10 +41,9 @@ public class ApplicationMain {
      * @throws InterruptedException
      */
 
-    final static String resourcesFilePath =
-            "D:\\JavaPetProjects\\Banking-Analyzer-ver-1.2\\src\\main\\resources\\transactions.txt";
+    final static String resourcesFilePath = ".\\resources\\transactions.txt";
 
-    private static String exportDirectoryPath = "D:\\JavaPetProjects\\Banking-Analyzer-ver-1.2\\src\\main\\resources\\";
+    private static String exportDirectoryPath = ".\\src\\main\\resources\\";
 
     public static void main(String[] args){
 
@@ -66,6 +68,7 @@ public class ApplicationMain {
         } catch (IOException e){
             e.printStackTrace();
         }
+
 
 
     }

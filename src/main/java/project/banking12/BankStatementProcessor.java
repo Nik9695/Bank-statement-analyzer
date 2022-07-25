@@ -13,15 +13,10 @@ import java.util.List;
  *
  *      2) calculate transactions in exact Month
  *
- *      3) calculate number of transactions\
+ *      3) calculate number of transactions
  *
  *      4) filter transactions according to some condition
  */
-
-/**
- * TODO
- */
-
 
 public class BankStatementProcessor {
 
