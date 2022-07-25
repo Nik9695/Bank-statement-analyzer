@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="src/images/🏦logo.png" alt="Logo" width="650" height="150">
+    <img src="src/images/logo.png" alt="Logo" width="650" height="150">
   </a>
 
 <h3 align="center">Bank statement analyzer</h3>
@@ -65,47 +65,26 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Java][Java]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [Java 8](https://www.oracle.com/java/technologies/java8.html)
+* [Apache Maven](https://maven.apache.org/)
+* [Junit 4](https://junit.org/junit4/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
+1.Clone the repo:
+   ```shell
+   git clone https://github.com/Nik9695/Banking-Analyzer-ver-1.2.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
+2.Install MVN packages:
+   ```shell
+   mvn install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3.Run application using maven plugin `exec` and specifying folder for export files: 
+   ```shell
+   mvn exec:java -Dexec.args="[absolute-file-path]"
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -115,7 +94,19 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Project is aimed on parsing 'CSV' or 'JSON' files containing information about bank transactions. 
+
+If you want to analyze your bank account activity you can use "Bank statement analyzer" to obtain information in three possible formats:
+
+* HTML
+* JSON
+* XML
+
+Application using domain object to present you a result of all bank activities presented in your input file ('SummaryStatistics').
+
+
+You can be sure that all your personal date will not be stored and shared because all manipulations are taking place on your local machine.
+
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
