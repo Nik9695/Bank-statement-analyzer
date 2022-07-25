@@ -1,6 +1,22 @@
 # Banking-Analyzer-ver-1.2
-Banking-Analyzer-ver-1.2
 
-new version of banking analyzer
+Overal description of the app.
 
-it will replace revision 1.1
+
+## Instalation 
+
+Instruction how to install the app
+
+## Usage
+
+??
+
+## Contributing 
+
+??
+
+
+## License
+
+
+??
