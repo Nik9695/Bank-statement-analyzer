@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id="top"></div>
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -216,3 +217,27 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+=======
+# Banking-Analyzer-ver-1.2
+
+Overal description of the app.
+
+
+## Instalation 
+
+Instruction how to install the app
+
+## Usage
+
+??
+
+## Contributing 
+
+??
+
+
+## License
+
+
+??
+>>>>>>> 4e45649e52ce8cab656b2c457d91fab7db20062c
