@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="src/images/logo.png" alt="Logo" width="600" height="150">
+    <img src="src/images/🏦logo.png" alt="Logo" width="650" height="150">
   </a>
 
 <h3 align="center">Bank statement analyzer</h3>
@@ -68,7 +68,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
+* [![Java][Java]][Angular-url]
 * [![Svelte][Svelte.dev]][Svelte-url]
 * [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
