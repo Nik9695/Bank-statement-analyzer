@@ -1,0 +1,14 @@
+project\banking\BankTransaction.class
+project\banking\BankStatementParser.class
+project\banking\HtmlExporter.class
+project\banking\BankStatementAnalyzer.class
+project\banking\BankStatementCSVParser.class
+project\banking\ErrorCollector.class
+project\banking\BankTransactionFilter.class
+project\banking\BankTransactionSummarizer.class
+project\banking\BankStatementProcessor.class
+project\banking\XmlExporter.class
+project\banking\JsonExporter.class
+project\banking\SummaryStatistics.class
+project\banking\Exporter.class
+project\banking\ApplicationMain.class

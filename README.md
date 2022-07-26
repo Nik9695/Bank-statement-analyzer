@@ -88,7 +88,7 @@ In order to get an exact description of how the classes work, please refer to th
 
 1.Clone the repo:
    ```shell
-   git clone https://github.com/Nik9695/Banking-Analyzer-ver-1.2.git
+   git clone https://github.com/Nik9695/Bank-statement-analyzer.git
    ```
 2.Install MVN packages:
    ```shell
@@ -101,16 +101,16 @@ In order to get an exact description of how the classes work, please refer to th
 4.Run application:
 - using maven plugin `exec` and specifying folder where your 'CSV' file for parsing is located:
    ```shell
-    ...\Banking-Analyzer-ver-1.2>mvn exec:java -Dexec.args="[absolute-file-path]"
+    ...\Bank-statement-analyzer>mvn exec:java -Dexec.args="[absolute-file-path]"
    ```
 - using maven plugin `exec` without specifying folder dor input. In this case example-file `transactions.txt` will be parsed:
   ```shell
-  ...\Banking-Analyzer-ver-1.2>mvn exec:java 
+  ...\Bank-statement-analyzer>mvn exec:java 
   ```
 
 In both options export files will be created in next directory :
 ```shell
-...\Banking-Analyzer-ver-1.2\src\main\resources
+...\Bank-statement-analyzer\src\main\resources
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -157,7 +157,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   - [x] Export to XML
 
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Nik9695/Bank-statement-analyzer/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -185,26 +185,24 @@ Don't forget to give the project a star! Thanks again!
 
 Nikita Agureev - nagureev@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/Nik9695/Bank-statement-analyzer](https://github.com/github_username/repo_name)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Nik9695/Banking-Analyzer-ver-1.2.svg?style=for-the-badge
-[contributors-url]: https://github.com/Nik9695/Banking-Analyzer-ver-1.2/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/Nik9695/Bank-statement-analyzer.svg?style=for-the-badge
+[contributors-url]: https://github.com/Nik9695/Bank-statement-analyzer/graphs/contributors
 
-[stars-shield]: https://img.shields.io/github/stars/Nik9695/Banking-Analyzer-ver-1.2.svg?style=for-the-badge
-[stars-url]: https://github.com/Nik9695/Banking-Analyzer-ver-1.2/stargazers
+[stars-shield]: https://img.shields.io/github/stars/Nik9695/Bank-statement-analyzer.svg?style=for-the-badge
+[stars-url]: https://github.com/Nik9695/Bank-statement-analyzer/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/Nik9695/Banking-Analyzer-ver-1.2.svg?style=for-the-badge
-[issues-url]: https://github.com/Nik9695/Banking-Analyzer-ver-1.2/issues
+[issues-shield]: https://img.shields.io/github/issues/Nik9695/Bank-statement-analyzer.svg?style=for-the-badge
+[issues-url]: https://github.com/Nik9695/Bank-statement-analyzer/issues
 
-=======
-# Banking-Analyzer-ver-1.2
+
+# Bank-statement-analyzer
