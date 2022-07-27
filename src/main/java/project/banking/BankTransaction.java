@@ -5,7 +5,13 @@ import java.time.LocalDate;
 /**
  * Class is a data transfer object (DTO).
  *
- * Represents bank transaction itself.
+ * Represents bank transaction with all characteristics: <br/><br/>
+ *
+ *  1) Date - when transaction was performed;<br/><br/>
+ *
+ *  2) Amount - amount of transaction (can be negative, marked with sign "-");<br/><br/>
+ *
+ *  3) Description - text description of transaction.
  */
 
 public class BankTransaction {
@@ -15,10 +21,12 @@ public class BankTransaction {
     private final String description;
 
     /**
-     * Class constructor.
-     * @param date
-     * @param amount
-     * @param description
+     * Class constructor, setting all information about transaction :
+     * {@link BankTransaction#date}, {@link BankTransaction#amount},{@link BankTransaction#description}.
+     *
+     * @param date when transaction was performed.
+     * @param amount amount of transaction.
+     * @param description text description of transaction.
      */
     public BankTransaction(LocalDate date, double amount, String description){
         this.date = date;

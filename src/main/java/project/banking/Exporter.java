@@ -1,21 +1,21 @@
 package project.banking;
 
 /**
- * Interface giving an opportunity to export 'SummaryStatistics' into
+ * Interface giving an opportunity to export {@link SummaryStatistics} into
  * different formats (depends on realisation).
  *
  * According to open/closed principle, this interface makes it possible
  * to avoid the strong connection of various exporters with each other.
+ *
+ * @see SummaryStatistics
  */
 
 public interface Exporter {
 
     /**
-     * Returns 'String' value.
+     * Returns {@link String} representation of parsed input file.
      *
-     * The result 'String' of the method can be passed to any output (file,console,email etc.).
-     *
-     * @param summaryStatistics
+     * @param summaryStatistics {@link SummaryStatistics} domain object which represents analyzed input file.
      * @return String
      */
     String export(SummaryStatistics summaryStatistics);

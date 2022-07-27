@@ -6,15 +6,17 @@ import java.util.DoubleSummaryStatistics;
 import java.util.List;
 
 /**
+ * Class is responsible for processing of banking transactions.
+ *
  * Possible functions:
+ *<br/><br/>
+ *      1) create Summary Statics ( max, min, sum, avg);<br/><br/>
  *
- *      1) create Summary Statics ( max, min, sum, avg);
+ *      2) calculate transactions in exact Month;<br/><br/>
  *
- *      2) calculate transactions in exact Month;
+ *      3) calculate number of transactions;<br/><br/>
  *
- *      3) calculate number of transactions;
- *
- *      4) filter transactions according to some condition;
+ *      4) filter transactions according to some condition;<br/><br/>
  *
  * Class follows up single responsibility principle: class responsibility is "processing";
  */
@@ -25,8 +27,8 @@ public class BankStatementProcessor {
 
     /**
      * Class constructor.
-     * Receives a list of bank transactions as an argument and saves to its field.
-     * @param bankTransactions
+     * Receives a list of bank transactions as an argument and saves it to {@link BankStatementProcessor#bankTransactions}.
+     * @param bankTransactions container of {@link BankTransaction} elements to be encapsulated in the class.
      */
     public BankStatementProcessor(final List<BankTransaction> bankTransactions){
         this.bankTransactions = bankTransactions;

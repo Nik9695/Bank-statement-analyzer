@@ -5,6 +5,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
+/**
+ * Class exports {@link SummaryStatistics} into JSON format.
+ * @see SummaryStatistics
+ * @see Exporter
+ */
+
 public class JsonExporter implements Exporter{
 
     private static String exportDirectoryPath;
@@ -12,7 +18,7 @@ public class JsonExporter implements Exporter{
 
     /**
      * Class constructor, receives directory path for export as an argument.
-     * @param exportDirectoryPath
+     * @param exportDirectoryPath {@link String} value which specifies <i><b>directory path</b></i> for export.
      */
 
     public JsonExporter(String exportDirectoryPath){
@@ -20,12 +26,11 @@ public class JsonExporter implements Exporter{
     }
 
     /**
-     *  Returns 'String' result which corresponds to '.json' file structure.
+     *  Returns {@link String} result which corresponds to .json file structure.
      *
-     *  Creates '.json' file in export directory path (src\main\resources).
-     *
-     * @param summaryStatistics
-     * @return String
+     *  Creates .xml file in export directory path (src\main\resources).
+     * @param summaryStatistics {@link SummaryStatistics} object which is already analyzed and need to be exported.
+     * @return {@link String} representation of analyzed bank transaction statistics.
      */
 
     @Override

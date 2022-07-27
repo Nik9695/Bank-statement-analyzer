@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Class is a realisation of 'BankStatementParser' which is designed
- * for parsing '.csv' files.
+ * Class is a realisation of {@link BankStatementParser} which is designed for parsing .csv files.
  *
  * Class follows up single responsibility principle: class responsibility is "parsing";
  */
@@ -16,9 +15,9 @@ public class BankStatementCSVParser implements BankStatementParser{
     final static DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
     /**
-     *  Method parsing a 'String' line, splitting it by expressions and
-     *  generating new 'BankTransaction' object.
-     * @param line
+     *  Method parsing a {@link String} line, splitting it by expressions and
+     *  generating new {@link BankTransaction} object.
+     * @param line the source for parsing.
      * @return BankTransaction
      */
     public BankTransaction parseFrom(String line){
@@ -32,11 +31,11 @@ public class BankStatementCSVParser implements BankStatementParser{
     }
 
     /**
-     * Method iterates over the 'String' list,
-     * for each line it applies method 'parseFrom' which returns a new 'BankTransaction' object.
+     * Method iterates over the List<{@link String}> container.
+     * For each element from container it applies method {@link BankStatementCSVParser#parseFrom(String)}.
      * Each new object accumulates to list of bank transactions.
-     * @param lines
-     * @return List<BankTransaction>
+     * @param lines the source for parsing.
+     * @return List<{@link BankTransaction}>
      */
     public List<BankTransaction> parseByLines(final List<String> lines){
         final List<BankTransaction> bankTransactions = new ArrayList<>();

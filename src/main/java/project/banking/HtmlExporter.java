@@ -1,13 +1,15 @@
 package project.banking;
 
-/**
- * Class exports Summary Statistics into HTML format
- */
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+
+/**
+ * Class exports {@link SummaryStatistics} into HTML format.
+ * @see SummaryStatistics
+ * @see Exporter
+ */
 
 public class HtmlExporter implements  Exporter{
 
@@ -16,7 +18,7 @@ public class HtmlExporter implements  Exporter{
 
     /**
      * Class constructor, receives directory path for export as an argument.
-     * @param exportDirectoryPath
+     * @param exportDirectoryPath {@link String} value which specifies <i><b>directory path</b></i> for export.
      */
 
     public HtmlExporter(String exportDirectoryPath){
@@ -24,11 +26,11 @@ public class HtmlExporter implements  Exporter{
     }
 
     /**
-     *  Returns 'String' result which corresponds to '.html' file structure.
+     *  Returns {@link String} result which corresponds to .html file structure.
      *
-     *  Creates '.html' file in export directory path (src\main\resources).
-     * @param summaryStatistics
-     * @return
+     *  Creates .xml file in export directory path (src\main\resources).
+     * @param summaryStatistics {@link SummaryStatistics} object which is already analyzed and need to be exported.
+     * @return {@link String} representation of analyzed bank transaction statistics.
      */
 
     @Override
