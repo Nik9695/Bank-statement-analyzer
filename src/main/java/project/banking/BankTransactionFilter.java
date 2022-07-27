@@ -1,17 +1,21 @@
 package project.banking;
 
 /**
- * Interface for filtering bank transactions according to any principle
+ * Interface giving an opportunity to sort 'Bank transactions' list
+ * according to some condition.
  */
 
 @FunctionalInterface
 public interface BankTransactionFilter {
+
     /**
-     * DESCRIPTION
+     * Returns "true" if passed 'BankTransaction' matches the condition, and "false" otherwise.
      *
+     * Еhe method has access to all properties of the 'BankTransaction' object,
+     * which allows you to set any search criteria
      *
-     * @param bankTransaction
-     * @return
+     *  @param bankTransaction
+     * @return boolean
      */
     boolean test(BankTransaction bankTransaction);
 }

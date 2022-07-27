@@ -10,9 +10,22 @@ public class XmlExporter implements Exporter{
     private static String exportDirectoryPath;
     private final static String FILE_NAME = "XmlSummaryStatistics.xml";
 
+    /**
+     * Class constructor, receives directory path for export as an argument.
+     * @param exportDirectoryPath
+     */
+
     public XmlExporter(String exportDirectoryPath){
         this.exportDirectoryPath = exportDirectoryPath;
     }
+
+    /**
+     *  Returns 'String' result which corresponds to '.xml' file structure.
+     *
+     *  Creates '.xml' file in export directory path (src\main\resources).
+     * @param summaryStatistics
+     * @return
+     */
 
     @Override
     public String export(SummaryStatistics summaryStatistics) {

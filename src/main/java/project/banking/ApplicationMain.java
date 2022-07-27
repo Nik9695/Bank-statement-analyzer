@@ -30,17 +30,6 @@ import java.io.IOException;
 
 public class ApplicationMain {
 
-    /**
-     * to run program using maven it is needed to pass absolute path of the investigated file
-     * for example: $mvn exec:java -Dexec.args="[absolute-file-path]"
-     *
-     * variable filePath is the absolute path to the file located on local computer.
-     *
-     * @param args
-     * @throws IOException
-     * @throws InterruptedException
-     */
-
     final static String resourcesFilePath = "src\\main\\resources\\transactions.txt";
 
     private static String exportDirectoryPath = "src\\main\\resources\\";
@@ -56,7 +45,7 @@ public class ApplicationMain {
 
 
         try{
-            if(args.length < 1){
+            if(args.length == 0){
                 analyzer.analyze(resourcesFilePath, parserCSV, exporterHtml);
                 analyzer.analyze(resourcesFilePath, parserCSV, exporterJson);
                 analyzer.analyze(resourcesFilePath, parserCSV, exporterXml);
@@ -66,10 +55,7 @@ public class ApplicationMain {
                 analyzer.analyze(args[0], parserCSV, exporterXml);
             }
         } catch (IOException e){
-            e.printStackTrace();
+            System.out.println("Error in main method.");;
         }
-
-
-
     }
 }

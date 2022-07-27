@@ -16,7 +16,7 @@
   <p align="center">
     Project description
     <br/>
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://nik9695.github.io/Bank-statement-analyzer/"><strong>Explore the docs »</strong></a>
   </p>
 </div>
 
@@ -134,7 +134,7 @@ Application using domain object to present you a result of all bank activities p
 You can be sure that all your personal date will not be stored and shared because all manipulations are taking place on your local machine.
 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://nik9695.github.io/Bank-statement-analyzer/)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

@@ -10,9 +10,23 @@ public class JsonExporter implements Exporter{
     private static String exportDirectoryPath;
     private final static String FILE_NAME = "JsonSummaryStatistics.json";
 
+    /**
+     * Class constructor, receives directory path for export as an argument.
+     * @param exportDirectoryPath
+     */
+
     public JsonExporter(String exportDirectoryPath){
         this.exportDirectoryPath = exportDirectoryPath;
     }
+
+    /**
+     *  Returns 'String' result which corresponds to '.json' file structure.
+     *
+     *  Creates '.json' file in export directory path (src\main\resources).
+     *
+     * @param summaryStatistics
+     * @return String
+     */
 
     @Override
     public String export(SummaryStatistics summaryStatistics) {

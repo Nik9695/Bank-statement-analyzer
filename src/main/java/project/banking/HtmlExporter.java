@@ -14,9 +14,22 @@ public class HtmlExporter implements  Exporter{
     private static String exportDirectoryPath;
     private final static String FILE_NAME = "HtmlSummaryStatistics.html";
 
+    /**
+     * Class constructor, receives directory path for export as an argument.
+     * @param exportDirectoryPath
+     */
+
     public HtmlExporter(String exportDirectoryPath){
         this.exportDirectoryPath = exportDirectoryPath;
     }
+
+    /**
+     *  Returns 'String' result which corresponds to '.html' file structure.
+     *
+     *  Creates '.html' file in export directory path (src\main\resources).
+     * @param summaryStatistics
+     * @return
+     */
 
     @Override
     public String export(final SummaryStatistics summaryStatistics) {
