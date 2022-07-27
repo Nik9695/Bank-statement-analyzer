@@ -3,7 +3,8 @@ package project.banking;
 import java.util.List;
 
 /**
- * Implementation of the interface give an opportunity for converting 'String' <br/>
+ * Implementation of the interface give an opportunity for converting 'String'.
+ *
  * line to 'BankTransaction' representation.
  */
 
