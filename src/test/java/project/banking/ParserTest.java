@@ -16,22 +16,22 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ParserTest {
-    private static final String FILE_PATH =
-            "D:\\JavaPetProjects\\Banking-Analyzer-ver-1.2\\src\\test\\resources\\transactionsForTest.txt";
+    private static final String FILE_PATH = "src\\test\\resources\\transactionsForTest.txt";
 
     private static Path path = Paths.get(FILE_PATH);
 
 
 
     @Test
-    public void parsefromCSVtest(){
+    public void parseFromCSVtest(){
         final BankStatementCSVParser bankStatementParser = new BankStatementCSVParser();
 
         final String line = "30-01-2017,-100,Deliveroo";
 
         BankTransaction testingResult = bankStatementParser.parseFrom(line);
 
-        BankTransaction expectedResult = new BankTransaction(LocalDate.of(2017, Month.JANUARY,30),-100,"Deliveroo");
+        BankTransaction expectedResult =
+                new BankTransaction(LocalDate.of(2017, Month.JANUARY,30),-100,"Deliveroo");
 
         final double tolerance = 0d;
 
